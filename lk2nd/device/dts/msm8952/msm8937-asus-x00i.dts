@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+/dts-v1/;
+
+#include <skeleton64.dtsi>
+#include <lk2nd.dtsi>
+
+
+/*
+ * This device is quirky. It excluded from generic build.
+ * To run lk2nd on this device you need to flash custom bootloader and unlock it.
+ * Read more https://wiki.postmarketos.org/wiki/Huawei_Mediapad_T3_10_(huawei-agassi)#Bootloader_unlocking
+ *
+ * Compile lk2nd with the following flags to run on this device
+ * LK2ND_ADTBS="msm8937-asus-x00i.dtb"
+ * LK2ND_COMPATIBLE="asus,x00i"
+ */
+
+/ {
+	qcom,msm-id = <QCOM_ID_MSM8937 0>;
+	qcom,board-id = <QCOM_BOARD_ID(QRD, 1, 0) 0>;
+};
+
+&lk2nd {
+	asus-x00i {
+		model = "Asus Zenphone 4 Max Pro (x00i)";
+		compatible = "asus,x00i";
+		lk2nd,dtb-files = "msm8937-asus-x00i";
+    lk2nd,match-cmdline = "*MSM8937*";
+	};
+};

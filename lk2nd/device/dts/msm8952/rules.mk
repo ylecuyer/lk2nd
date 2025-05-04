@@ -23,6 +23,7 @@ ADTBS += \
 	$(LOCAL_DIR)/sdm429-lenovo-tbx505x.dtb  \
 	$(LOCAL_DIR)/sdm429w-fossil-hoki.dtb  \
 	$(LOCAL_DIR)/sdm439-xiaomi-pine.dtb \
+	$(LOCAL_DIR)/msm8937-asus-x00i.dtb \
 
 DTBS += \
 	$(LOCAL_DIR)/msm8917-huawei-agassi.dtb \
