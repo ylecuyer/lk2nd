@@ -34,6 +34,7 @@
 
 		gpio-keys {
 			compatible = "gpio-keys";
+
 			home {
 				lk2nd,code = <KEY_HOME>;
 				gpios = <&tlmm 109 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -62,10 +63,10 @@
 	coreprimelte {
 		// In the downstream dts it is called Samsung ROSSA PROJECT Rev00
 		model = "Samsung Galaxy Core Prime LTE (SM-G360F)";
-		compatible = "samsung,coreprimelte", "samsung,cprime";
+		compatible = "samsung,coreprimelte", "samsung,rossa";
 		lk2nd,match-bootloader = "G360F*";
 
-		lk2nd,dtb-files = "msm8916-samsung-cprime";
+		lk2nd,dtb-files = "msm8916-samsung-rossa";
 
 		qcom,msm-id = <QCOM_ID_MSM8916 0>;
 		qcom,board-id = <0xCE08FF01 1>;
@@ -83,6 +84,7 @@
 			ss_dsi_panel_HX8369B_BV045WVM_WVGA {
 				compatible = "samsung,hx8369b-bv045wvm";
 			};
+
 			ss_dsi_panel_SC7798A_BV045WVM_WVGA {
 				compatible = "samsung,sc7798a-bv045wvm";
 			};
@@ -103,6 +105,7 @@
 
 		gpio-keys {
 			compatible = "gpio-keys";
+
 			home {
 				lk2nd,code = <KEY_HOME>;
 				gpios = <&tlmm 109 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -122,6 +125,7 @@
 
 		gpio-keys {
 			compatible = "gpio-keys";
+
 			home {
 				lk2nd,code = <KEY_HOME>;
 				gpios = <&tlmm 109 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -152,6 +156,7 @@
 
 		gpio-keys {
 			compatible = "gpio-keys";
+
 			home {
 				lk2nd,code = <KEY_HOME>;
 				gpios = <&tlmm 109 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -197,10 +202,10 @@
 
 	rossaltedv {
 		model = "Samsung Galaxy Core Prime LTE (SM-G360GD)";
-		compatible = "samsung,rossaltexsa", "samsung,cprime";
+		compatible = "samsung,rossaltexsa", "samsung,rossa";
 		lk2nd,match-bootloader = "G360GD*";
 
-		lk2nd,dtb-files = "msm8916-samsung-cprime";
+		lk2nd,dtb-files = "msm8916-samsung-rossa";
 
 		qcom,msm-id = <QCOM_ID_MSM8916 0>;
 		qcom,board-id = <0xCE08FF01 1>;
@@ -218,6 +223,7 @@
 			ss_dsi_panel_HX8369B_BV045WVM_WVGA {
 				compatible = "samsung,hx8369b-bv045wvm";
 			};
+
 			ss_dsi_panel_SC7798A_BV045WVM_WVGA {
 				compatible = "samsung,sc7798a-bv045wvm";
 			};
@@ -225,6 +231,33 @@
 	};
 
 	/* rev 2 */
+
+	coreprimeltevzw {
+		model = "Samsung Galaxy Core Prime LTE (SM-G360V)";
+		compatible = "samsung,coreprimeltevzw", "samsung,rossa";
+		lk2nd,match-bootloader = "G360V*";
+
+		lk2nd,dtb-files = "msm8916-samsung-rossa";
+
+		qcom,msm-id = <QCOM_ID_MSM8916 0>;
+		qcom,board-id = <0xCE08FF01 2>;
+
+		panel {
+			compatible = "samsung,cprime-panel", "lk2nd,panel";
+
+			ss_dsi_panel_HX8369B_BV045WVM_WVGA {
+				compatible = "samsung,hx8369b-bv045wvm";
+			};
+
+			ss_dsi_panel_SC7798A_BV045WVM_WVGA {
+				compatible = "samsung,sc7798a-bv045wvm";
+			};
+
+			ss_dsi_panel_SC7798D_BV045WVM_WVGA {
+				compatible = "samsung,sc7798d-bv045wvm";
+			};
+		};
+	};
 
 	gprimeltecan {
 		model = "Samsung Galaxy Grand Prime (SM-G530W)";
@@ -249,6 +282,7 @@
 			ss_dsi_panel_HX8389C_GH9607501A_QHD {
 				compatible = "samsung,hx8389c-gh9607501a";
 			};
+
 			ss_dsi_panel_S6D78A0_GH9607501A_QHD {
 				compatible = "samsung,s6d78a0-gh9607501a";
 			};
@@ -278,6 +312,7 @@
 			ss_dsi_panel_HX8389C_GH9607501A_QHD {
 				compatible = "samsung,hx8389c-gh9607501a";
 			};
+
 			ss_dsi_panel_S6D78A0_GH9607501A_QHD {
 				compatible = "samsung,s6d78a0-gh9607501a";
 			};
@@ -309,6 +344,26 @@
 
 	/* rev 3 */
 
+	a3ltezt {
+		model = "Samsung Galaxy A3 (SM-A300YZ)";
+		compatible = "samsung,a3ltezt", "samsung,a3u-eur", "samsung,a3";
+		lk2nd,match-bootloader = "A300YZ*";
+
+		lk2nd,dtb-files = "msm8916-samsung-a3u-eur";
+
+		qcom,msm-id = <QCOM_ID_MSM8916 0>;
+		qcom,board-id = <0xCE08FF01 3>;
+
+		gpio-keys {
+			compatible = "gpio-keys";
+
+			home {
+				lk2nd,code = <KEY_HOME>;
+				gpios = <&tlmm 109 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			};
+		};
+	};
+
 	gprimelteusc {
 		model = "Samsung Galaxy Grand Prime (SM-G530R4)";
 		compatible = "samsung,gprimelteusc";
@@ -332,6 +387,7 @@
 			ss_dsi_panel_HX8389C_GH9607501A_QHD {
 				compatible = "samsung,hx8389c-gh9607501a";
 			};
+
 			ss_dsi_panel_S6D78A0_GH9607501A_QHD {
 				compatible = "samsung,s6d78a0-gh9607501a";
 			};
@@ -357,6 +413,7 @@
 
 		gpio-keys {
 			compatible = "gpio-keys";
+
 			home {
 				lk2nd,code = <KEY_HOME>;
 				gpios = <&tlmm 109 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -461,10 +518,10 @@
 	 */
 	rossaltezt {
 		model = "Samsung Galaxy Core Prime LTE (SM-G360GZT)";
-		compatible = "samsung,rossaltexsa", "samsung,cprime";
+		compatible = "samsung,rossaltexsa", "samsung,rossa";
 		lk2nd,match-bootloader = "G360GZT*";
 
-		lk2nd,dtb-files = "msm8916-samsung-cprime";
+		lk2nd,dtb-files = "msm8916-samsung-rossa";
 
 		qcom,msm-id = <QCOM_ID_MSM8916 0>;
 		qcom,board-id = <0xCE08FF01 3>;
@@ -482,6 +539,7 @@
 			ss_dsi_panel_HX8369B_BV045WVM_WVGA {
 				compatible = "samsung,hx8369b-bv045wvm";
 			};
+
 			ss_dsi_panel_SC7798A_BV045WVM_WVGA {
 				compatible = "samsung,sc7798a-bv045wvm";
 			};
@@ -629,6 +687,24 @@
 		};
 	};
 
+	j5ltedx {
+		model = "Samsung Galaxy J5 2015 (SM-J500G)";
+		compatible = "samsung,j5ltedx", "samsung,j5";
+		lk2nd,match-bootloader = "J500G*";
+
+		lk2nd,dtb-files = "msm8916-samsung-j5";
+
+		qcom,msm-id = <QCOM_ID_MSM8916 0>;
+		qcom,board-id = <0xCE08FF01 5>;
+
+		muic-reset {
+			compatible = "samsung,muic-reset";
+			i2c-reg = <0x25>;
+			i2c-sda-gpios = <&tlmm 105 I2C_GPIO_FLAGS>;
+			i2c-scl-gpios = <&tlmm 106 I2C_GPIO_FLAGS>;
+		};
+	};
+
 	j5lteub {
 		model = "Samsung Galaxy J5 2015 (SM-J500M)";
 		compatible = "samsung,j5lteub", "samsung,j5";
@@ -705,10 +781,10 @@
 
 	cprimeltetmo {
 		model = "Samsung Galaxy Core Prime LTE (SM-G360T)";
-		compatible = "samsung,cprimeltetmo", "samsung,cprime";
+		compatible = "samsung,cprimeltetmo", "samsung,rossa";
 		lk2nd,match-bootloader = "G360T*";
 
-		lk2nd,dtb-files = "msm8916-samsung-cprime";
+		lk2nd,dtb-files = "msm8916-samsung-rossa";
 
 		qcom,msm-id = <QCOM_ID_MSM8916 0>;
 		qcom,board-id = <0xCE08FF01 6>;
@@ -726,30 +802,9 @@
 			ss_dsi_panel_HX8369B_BV045WVM_WVGA {
 				compatible = "samsung,hx8369b-bv045wvm";
 			};
+
 			ss_dsi_panel_SC7798A_BV045WVM_WVGA {
 				compatible = "samsung,sc7798a-bv045wvm";
-			};
-		};
-	};
-
-	e7000 {
-		model = "Samsung Galaxy E7 (SM-E7000)";
-		compatible = "samsung,e7000", "samsung,e7";
-		lk2nd,match-bootloader = "E7000*";
-
-		lk2nd,dtb-files = "msm8916-samsung-e7";
-
-		qcom,msm-id = <QCOM_ID_MSM8916 0>;
-		qcom,board-id = <0xCE08FF01 6>;
-
-		panel {
-			compatible = "samsung,e7-panel", "lk2nd,panel";
-
-			ss_dsi_panel_EA8061_HD {
-				compatible = "samsung,ea8061-ams549bu19";
-			};
-			ss_dsi_panel_EA8061_ID400418_HD {
-				compatible = "samsung,ea8061-ams549bu19-id400418";
 			};
 		};
 	};
@@ -770,6 +825,53 @@
 			ss_dsi_panel_EA8061_HD {
 				compatible = "samsung,ea8061-ams549bu19";
 			};
+
+			ss_dsi_panel_EA8061_ID400418_HD {
+				compatible = "samsung,ea8061-ams549bu19-id400418";
+			};
+		};
+	};
+
+	e7ltezc {
+		model = "Samsung Galaxy E7 (SM-E7000)";
+		compatible = "samsung,e7ltechn", "samsung,e7";
+		lk2nd,match-bootloader = "E7000ZC*";
+
+		lk2nd,dtb-files = "msm8916-samsung-e7";
+
+		qcom,msm-id = <QCOM_ID_MSM8916 0>;
+		qcom,board-id = <0xCE08FF01 6>;
+
+		panel {
+			compatible = "samsung,e7-panel", "lk2nd,panel";
+
+			ss_dsi_panel_EA8061_HD {
+				compatible = "samsung,ea8061-ams549bu19";
+			};
+
+			ss_dsi_panel_EA8061_ID400418_HD {
+				compatible = "samsung,ea8061-ams549bu19-id400418";
+			};
+		};
+	};
+
+	e7ltezs {
+		model = "Samsung Galaxy E7 (SM-E7000)";
+		compatible = "samsung,e7ltehktw", "samsung,e7";
+		lk2nd,match-bootloader = "E7000ZS*";
+
+		lk2nd,dtb-files = "msm8916-samsung-e7";
+
+		qcom,msm-id = <QCOM_ID_MSM8916 0>;
+		qcom,board-id = <0xCE08FF01 6>;
+
+		panel {
+			compatible = "samsung,e7-panel", "lk2nd,panel";
+
+			ss_dsi_panel_EA8061_HD {
+				compatible = "samsung,ea8061-ams549bu19";
+			};
+
 			ss_dsi_panel_EA8061_ID400418_HD {
 				compatible = "samsung,ea8061-ams549bu19-id400418";
 			};
@@ -788,6 +890,7 @@
 
 		gpio-keys {
 			compatible = "gpio-keys";
+
 			home {
 				lk2nd,code = <KEY_HOME>;
 				gpios = <&tlmm 109 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -820,13 +923,13 @@
 
 		gpio-keys {
 			compatible = "gpio-keys";
+
 			home {
 				lk2nd,code = <KEY_HOME>;
 				gpios = <&tlmm 109 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 			};
 		};
 	};
-
 
 	/*
 	 * To build for g5108q, add LK2ND_QCDTBS="msm8916-samsung.dtb"
